@@ -1,0 +1,422 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,400;1,500;1,600;1,700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root {
+  --small-font: 15px;
+  --big-font: 60px;
+  --medium-font: 40px;
+  --font-family: "Syne", Sans-seri;
+  --icon-size: 23px;
+  --white-color: white;
+  --white-grey: rgb(248, 248, 248);
+  --blue-color: #358cf6;
+  --dark-red-color: #357ddc;
+  --button-blue-color: #ececec;
+  --black-color: black;
+  --image-color: #358cf6;
+}
+
+.light-theme {
+  --white-color: white;
+  --black-color: black;
+  --blue-color: #358cf6;
+  --dark-red-color: #357ddc;
+  --white-grey: rgb(248, 248, 248);
+  --button-blue-color: #ececec;
+}
+
+.dark-theme {
+  --white-color: black;
+  --black-color: white;
+  --blue-color: #e7bdff;
+  --dark-red-color: #ce35dc;
+  --white-grey: rgb(13, 12, 12);
+  --button-blue-color: #bababa;
+  --image-color: rgb(255, 198, 255);
+}
+
+body {
+  background-color: var(--white-color);
+  /* background-image: linear-gradient(45deg, rgb(244, 244, 255), rgb(255, 245, 255)); */
+}
+
+/* ========================== Narve bar ================= */
+
+.uil {
+  font-size: 20px;
+}
+
+
+#narve-bar {
+  padding: 20px 5%;
+  display: grid;
+  grid-template-columns: 200px 3fr 1fr;
+  background-color: var(--white-color);
+  box-shadow: rgba(193, 193, 193, 0.2) 0px 2px 8px 0px;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  align-content: center;
+  align-items: center;
+  grid-gap:10px;
+  justify-content: center;
+}
+
+/* ========================== Narve Left ================= */
+.narve-left {
+  display: flex;
+  gap: 0;
+  align-items: center;
+  padding: 0;
+}
+
+.logo-flex{
+  display: flex;
+}
+
+
+.narve-left img {
+  cursor: pointer;
+  width: 40px;
+  color: var(--blue-color);
+  font-weight: bolder;
+  align-items: center;
+  margin-right: 10px;
+}
+
+
+
+/* ============================== narve middle ========================== */
+.narve-middle{
+  margin-right: 10px;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 2fr 300px;
+  grid-gap: 30px;
+}
+
+.narve-middle button {
+  margin: 0;
+  padding: 10px 20px;
+  background-color: var(--image-color);
+  border: none;
+  border-radius: 10px;
+  margin-right: 20px;
+  margin-left: 10px;
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+.narve-middle button:hover {
+  background-color: var(--dark-red-color);
+  transition: all ease-in-out 0.5s;
+}
+
+.narv-ul{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  align-content: center;
+}
+
+
+.narv-ul .company{
+ list-style: none; 
+ display: inline-block;
+ cursor: pointer;
+ padding-right: 10px;
+}
+
+.narv-ul1{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  align-content: center;
+}
+
+
+.narv-ul1 .company{
+ list-style: none; 
+ display: inline-block;
+ cursor: pointer;
+ padding-right: 10px;
+}
+
+
+.narve-middle input {
+  width: 800px;
+  padding: 15px;
+  padding-left: 50px;
+  border-radius: 20px;
+  border: var(--button-blue-color) 2px solid;
+  background-color: var(--white-color);
+  color: var(--black-color);
+  outline-style: var(--dark-blue-color);
+  margin-left: 0;
+}
+
+
+.uil-search {
+  position: absolute;
+  left: 480px;
+  top: 34px;
+  z-index: 2;
+  font-size: 20px;
+  color: rgb(160, 159, 159);
+}
+
+.none {
+  display: block;
+}
+
+/* ======================== right narve========================= */
+
+
+a {
+  text-decoration: none;
+}
+
+.company {
+  position: relative;
+}
+
+.company_ul1 {
+  position: absolute;
+  display: none;
+  background-color: var(--white-color);
+  padding: 30px 20px;
+  width: 200px;
+  border-radius: 10px;
+  top: 30px;
+  left: -50px;
+  border: var(--button-blue-color) solid 2px;
+}
+
+.company:hover .company_ul1 {
+  display: block;
+  transition: all ease-in-out 0.5s;
+}
+
+.company_ul1 li {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+.company ul li:hover {
+  background-color: var(--button-blue-color);
+}
+
+
+
+.company_ul {
+  position: absolute;
+  display: none;
+  background-color: var(--white-color);
+  padding: 30px 20px;
+  width: 300px;
+  border-radius: 10px;
+  top: 60px;
+  right: 0px;
+  border: var(--button-blue-color) solid 2px;
+}
+
+.company:hover .company_ul {
+  display: block;
+  transition: all ease-in-out 0.5s;
+}
+
+.company_ul li {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+.company ul li:hover {
+  background-color: var(--button-blue-color);
+}
+
+.narve-right{
+  width: 100%;
+  align-items: center;
+}
+
+
+.uil-shopping-cart,
+.uil-moon,
+.circle {
+  font-size: var(--icon-size);
+  cursor: pointer;
+  color: var(--black-color);
+  border: var(--button-blue-color) solid 1px;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+/* =============================== main body =========================== */
+.drops{
+  padding-top: 140px;
+  padding-left: 150px;
+  background-color: black;
+  color: white;
+}
+
+.drops h2{
+  font-size: 40px;
+  padding-bottom: 0;
+}
+
+
+.main_body {
+  display: grid;
+  height: 70vh;
+  width: 100%;
+  position: relative;
+  background-color: black;
+  align-items: center;
+  color: white;
+  padding-top: 0;
+}
+
+.main_body::before {
+  background-image: url(images/b1.webp);
+  height: 60vh;
+  width: 90%;
+  margin: auto;
+  border-radius: 50px;
+  position: absolute;
+  content: "";
+  background-repeat: no-repeat;
+  background-size: cover;
+  inset: 0;
+  opacity: 0.5;
+  animation: bgchange 20s linear infinite;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  transform: translateX(0);
+}
+
+@keyframes bgchange {
+  0% {
+    background-image: url(images/b1.webp);
+  }
+
+  15% {
+    background-image: url(images/b2.jpg) translateX(0);
+  }
+
+  25% {
+    background-image: url(images/b2.jpg) translateX(0);
+  }
+
+  35% {
+    background-image: url(images/b3.png);
+  }
+
+  45% {
+    background-image: url(images/b3.png);
+  }
+
+  55% {
+    background-image: url(images/b4.jpg);
+  }
+
+  65% {
+    background-image: url(images/b4.jpg);
+  }
+
+  75% {
+    background-image: url(images/b5.png);
+  }
+
+
+  85% {
+    background-image: url(images/b5.png);
+  }
+
+}
+
+
+
+
+.main_first{
+  font-family: poppins;
+  color: white;
+  isolation: isolate;
+  font-weight: bold;
+  text-align: left;
+  text-transform: uppercase;
+  padding-left: 150px;
+  position: absolute;
+  bottom: 100px;
+}
+
+.main_body h2{
+  font-size:40px;
+}
+
+.button_flex{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+}
+.main_body button {
+  padding: 15px 35px;
+  border-radius: 10px;
+  margin-top: 30px;
+  border: none;
+}
+
+.span {
+  color: var(--image-color);
+  isolation: isolate;
+}
+
+/* ============================= Collection ==================== */
+
+#collection {
+  padding: 100px 13%;
+}
+
+#collection .h2 {
+  padding: 30px 20px;
+  color: var(--black-color);
+}
+
+.collection {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 30px;
+}
+
+.image_1 img {
+  width: 100%;
+  border-radius: 20px;
+  height: 170px;
+}
+
+.image_1 h2 {
+  font-size: 18px;
+  padding-left: 10px;
+  color: var(--black-color);
+}
+
+.image_1 span {
+  font-size: 14px;
+  padding-left: 10px;
+  color: grey;
+}
